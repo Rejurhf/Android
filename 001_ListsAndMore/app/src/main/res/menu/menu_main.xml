@@ -7,20 +7,20 @@
         <item
             android:id="@+id/action_dialog"
             android:orderInCategory="100"
-            android:title="Out Dialog"
+            android:title="@string/out_dialog_menu_text"
             app:showAsAction="never" />
     </group>
 
     <item
         android:id="@+id/action_toast"
         android:orderInCategory="101"
-        android:title="Hello Toast"
+        android:title="@string/hello_toast_menu_text"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="102"
-        android:title="Exit"
+        android:title="@string/exit_menu_text"
         app:showAsAction="ifRoom"
         android:icon="@drawable/exit_icon" />
 

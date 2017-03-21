@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,14 +16,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello"
+        android:text="@string/hello_message"
         android:textSize="26sp"
         android:gravity="center"
-        android:id="@+id/hello_text_view"/>
+        android:id="@+id/hello_text_view"
+        android:layout_marginBottom="8dp"/>
 
     <ListView
+        android:id="@+id/options_list_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/option_list_view"></ListView>
+        android:layout_height="match_parent"></ListView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>
