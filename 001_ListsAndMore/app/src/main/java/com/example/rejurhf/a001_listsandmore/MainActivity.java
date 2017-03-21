@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             newDialog.show(getSupportFragmentManager(), "myDialog");
             return true;
         }else if(id == R.id.action_toast){
-            String message = "Hello";
+            String message = "Hello ";
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
             return true;
         }else if (id == R.id.action_exit){

@@ -19,13 +19,13 @@ public class DialogWindow extends DialogFragment {
         final AlertDialog.Builder myDialog = new AlertDialog.Builder(getActivity());
         myDialog.setTitle("Running away!");
         myDialog.setMessage("Do you want to exit?");
-        myDialog.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        myDialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 getActivity().finish();
             }
         });
-        myDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
+        myDialog.setNegativeButton("NO", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String message = "That's good for you";
