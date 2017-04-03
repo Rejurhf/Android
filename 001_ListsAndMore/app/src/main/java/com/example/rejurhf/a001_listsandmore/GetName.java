@@ -34,6 +34,8 @@ public class GetName extends Activity {
     }
 
     public void backButton(View view) {
+        Intent goingBack = new Intent();
+        setResult(RESULT_OK, goingBack);
         finish();
     }
 }

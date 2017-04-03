@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 String chosenOption = String.valueOf(parent.getItemAtPosition(position));
                 String text = "You chose " + chosenOption;
                 Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
-                if(chosenOption == "Pass Your name"){
+                if(chosenOption.equals("Pass Your name")){
                     Intent getNameScreenIntent = new Intent(MainActivity.this, GetName.class);
                     final int resoult = 1;
                     getNameScreenIntent.putExtra("callingActivity", "MainActivity");
