@@ -22,6 +22,9 @@
         <activity android:name=".GetName"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="Get Name"/>
+        <activity android:name=".CustomListView"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Custom ListView"/>
     </application>
 
 </manifest>

@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity {
                     final int resoult = 1;
                     getNameScreenIntent.putExtra("callingActivity", "MainActivity");
                     startActivityForResult(getNameScreenIntent, resoult);
+                }else if(chosenOption.equals("Custom ListView")){
+                    Intent getNameScreenIntent = new Intent(MainActivity.this, GetName.class);
+                    startActivity(getNameScreenIntent);
                 }
             }
         });
