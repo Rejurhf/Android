@@ -35,6 +35,7 @@ public class GetName extends Activity {
 
     public void backButton(View view) {
         Intent goingBack = new Intent();
+        goingBack.putExtra("UserName", "");
         setResult(RESULT_OK, goingBack);
         finish();
     }

@@ -12,31 +12,30 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 /**
- * Created by Rejurhf on 03.04.2017.
+ * Created by Rejurhf on 04.04.2017.
  */
 
-public class CustomListView extends Activity {
+public class ComplexListView extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.custom_listview_layout);
+        setContentView(R.layout.complex_listview_layout);
 
         String[] favoriteSeries = {"Lost", "Vikings", "Breaking Bad", "Game of Thrones", "Ranczo",
                 "Makłowicz w podróży", "Janosik", "Czterej pancerni i pies"};
-        ListAdapter newAdapter = new ArrayAdapter<String>(this, R.layout.row_layout,
-                R.id.textView1, favoriteSeries);
-        ListView list = (ListView) findViewById(R.id.custom_list);
+        ListAdapter newAdapter = new MyAdapter(this, favoriteSeries);
+        ListView list = (ListView) findViewById(R.id.custom_list_2);
         list.setAdapter(newAdapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String text = "You chose " + String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(CustomListView.this, text, Toast.LENGTH_SHORT).show();
+                Toast.makeText(ComplexListView.this, text, Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    public void backButton(View view) {
+    public void backButton2(View view) {
         Intent goingBack = new Intent();
         setResult(RESULT_OK, goingBack);
         finish();

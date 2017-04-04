@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] optionsList = {"Pass Your name", "Custom ListView",
+        final String[] optionsList = {"Pass Your name", "Custom ListView",
                 "Advance ListView", "Conversion"};
         final ListAdapter basicAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, optionsList);
@@ -36,14 +36,17 @@ public class MainActivity extends AppCompatActivity {
                 String chosenOption = String.valueOf(parent.getItemAtPosition(position));
                 String text = "You chose " + chosenOption;
                 Toast.makeText(MainActivity.this, text, Toast.LENGTH_SHORT).show();
-                if(chosenOption.equals("Pass Your name")){
+                if(chosenOption.equals(optionsList[0])){
                     Intent getNameScreenIntent = new Intent(MainActivity.this, GetName.class);
                     final int resoult = 1;
                     getNameScreenIntent.putExtra("callingActivity", "MainActivity");
                     startActivityForResult(getNameScreenIntent, resoult);
-                }else if(chosenOption.equals("Custom ListView")){
-                    Intent getNameScreenIntent = new Intent(MainActivity.this, GetName.class);
-                    startActivity(getNameScreenIntent);
+                }else if(chosenOption.equals(optionsList[1])){
+                    Intent getCustomListIntent = new Intent(MainActivity.this, CustomListView.class);
+                    startActivity(getCustomListIntent);
+                }else if(chosenOption.equals(optionsList[2])){
+                    Intent getComplexListIntent = new Intent(MainActivity.this, ComplexListView.class);
+                    startActivity(getComplexListIntent);
                 }
             }
         });
