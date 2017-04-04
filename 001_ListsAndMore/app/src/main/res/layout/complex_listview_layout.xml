@@ -11,12 +11,12 @@
         android:layout_gravity="center"
         android:text="Back"
         android:textSize="23sp"
-        android:id="@+id/back_button"
-        android:onClick="backButton"
+        android:id="@+id/back_button_2"
+        android:onClick="backButton2"
         android:layout_marginBottom="8dp"/>
-    
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/custom_list"></ListView>
+        android:id="@+id/custom_list_2"></ListView>
 </LinearLayout>

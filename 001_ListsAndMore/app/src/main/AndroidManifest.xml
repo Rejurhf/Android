@@ -25,6 +25,9 @@
         <activity android:name=".CustomListView"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="Custom ListView"/>
+        <activity android:name=".ComplexListView"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Custom ListView"/>
     </application>
 
 </manifest>
