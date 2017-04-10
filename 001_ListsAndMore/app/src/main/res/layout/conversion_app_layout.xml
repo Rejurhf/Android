@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert from: "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_margin="16dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1.0"
+            android:id="@+id/amount_edit_text"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/unit_type_spinner"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:columnCount="2"
+        android:rowCount="6"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:layout_margin="15dp"
+        android:background="?attr/colorButtonNormal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/m_text_view"
+            android:text="1.0"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginRight="125dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:text="metres"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mile_text_view"
+            android:text=".0006"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:text="miles"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inch_text_view"
+            android:text="39.37"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:text="inches"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/feet_text_view"
+            android:text="3.2808"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:text="feets"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/yard_text_view"
+            android:text="1,0936"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:text="yards"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/staja_text_view"
+            android:text="0.0002"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="23dp"/>
+
+        <TextView
+            android:text="stajany"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_gravity="left|top"/>
+    </GridLayout>
+</LinearLayout>

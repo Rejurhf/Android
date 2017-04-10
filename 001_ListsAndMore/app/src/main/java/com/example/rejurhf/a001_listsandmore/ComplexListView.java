@@ -19,12 +19,12 @@ public class ComplexListView extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.complex_listview_layout);
+        setContentView(R.layout.custom_listview_layout);
 
         String[] favoriteSeries = {"Lost", "Vikings", "Breaking Bad", "Game of Thrones", "Ranczo",
                 "Makłowicz w podróży", "Janosik", "Czterej pancerni i pies"};
         ListAdapter newAdapter = new MyAdapter(this, favoriteSeries);
-        ListView list = (ListView) findViewById(R.id.custom_list_2);
+        ListView list = (ListView) findViewById(R.id.custom_list);
         list.setAdapter(newAdapter);
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -35,7 +35,7 @@ public class ComplexListView extends Activity {
         });
     }
 
-    public void backButton2(View view) {
+    public void backButton(View view) {
         Intent goingBack = new Intent();
         setResult(RESULT_OK, goingBack);
         finish();
