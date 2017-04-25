@@ -63,4 +63,71 @@ public class Conversion extends Activity {
             }
         });
     }
+
+    public void checkIfConversionFromMetres(String currentUnit){
+        if (currentUnit.equals("metres")){
+            updateUnitTypeUsingMetres(Quantity.Unit.metres);
+        }else{
+            if (currentUnit.equals("mile")){
+                updateUnitTypeUsingOther(Quantity.Unit.mile);
+            }else if (currentUnit.equals("inch")){
+                updateUnitTypeUsingOther(Quantity.Unit.inch);
+            }else if (currentUnit.equals("feet")){
+                updateUnitTypeUsingOther(Quantity.Unit.feet);
+            }else if (currentUnit.equals("yard")){
+                updateUnitTypeUsingOther(Quantity.Unit.yard);
+            }else{
+                updateUnitTypeUsingOther(Quantity.Unit.staja);
+            }
+        }
+    }
+
+    public void updateUnitTypeUsingMetres(Quantity.Unit currentUnit){
+        double doubleToCOnvert = Double.parseDouble(inputEditText.getText().toString());
+        String metresValueString = Double.toString(doubleToCOnvert);
+        metresTextView.setText(metresValueString);
+
+        updateUnitTextFieldUsingMetres(doubleToCOnvert, Quantity.Unit.mile, mileTextView);
+        updateUnitTextFieldUsingMetres(doubleToCOnvert, Quantity.Unit.inch, inchTextView);
+        updateUnitTextFieldUsingMetres(doubleToCOnvert, Quantity.Unit.feet, feetTextView);
+        updateUnitTextFieldUsingMetres(doubleToCOnvert, Quantity.Unit.yard, yardTextView);
+        updateUnitTextFieldUsingMetres(doubleToCOnvert, Quantity.Unit.staja, stajaTextView);
+    }
+
+    public void updateUnitTextFieldUsingMetres(double doubleToCOnvert,
+                                               Quantity.Unit unitConvertTo, TextView theTextView){
+        Quantity unitQuantity = new Quantity(doubleToCOnvert, Quantity.Unit.metres);
+        String tmpTextView = unitQuantity.to(unitConvertTo).toString();
+        theTextView.setText(tmpTextView);
+    }
+
+    public void updateUnitTypeUsingOther(Quantity.Unit currentUnit){
+        double doubleToConvert = Double.parseDouble(inputEditText.getText().toString());
+        Quantity currentQuantitySeleccted = new Quantity(doubleToConvert, currentUnit);
+        String valueInMetres = currentQuantitySeleccted.to(Quantity.Unit.metres).toString();
+        metresTextView.setText(valueInMetres);
+
+        updateUnitTextFieldUsingMetres(doubleToConvert, currentUnit,
+                Quantity.Unit.mile, mileTextView);
+        updateUnitTextFieldUsingMetres(doubleToConvert, currentUnit,
+                Quantity.Unit.inch, inchTextView);
+        updateUnitTextFieldUsingMetres(doubleToConvert, currentUnit,
+                Quantity.Unit.feet, feetTextView);
+        updateUnitTextFieldUsingMetres(doubleToConvert, currentUnit,
+                Quantity.Unit.yard, yardTextView);
+        updateUnitTextFieldUsingMetres(doubleToConvert, currentUnit,
+                Quantity.Unit.staja, stajaTextView);
+
+        //TODO textview
+    }
+
+    public void updateUnitTextFieldUsingMetres(double doubleToCOnvert, Quantity.Unit currentUnit,
+                                               Quantity.Unit unitConvertTo, TextView theTextView){
+        Quantity currentQuantitySelected = new Quantity(doubleToCOnvert, currentUnit);
+        String tmpTextView =
+                currentQuantitySelected.to(Quantity.Unit.metres).to(unitConvertTo).toString();
+        theTextView.setText(tmpTextView);
+    }
+
+    //TODO Przerobić na wartość z jednostką
 }

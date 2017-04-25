@@ -22,7 +22,13 @@ public class Quantity {
         private double fromBaseUnit(double value){ return value * byBaseUnit; }
     }
 
-    public Quantity(double value, Unit newUnit){
+    public Quantity(double value, Unit unit){
+        super();
+        this.value = value;
+        this.unit = unit;
+    }
+
+    public Quantity to(Unit newUnit){
         Unit oldUnit = this.unit;
         return new Quantity(newUnit.fromBaseUnit(oldUnit.toBaseUnit(value)), newUnit);
     }
