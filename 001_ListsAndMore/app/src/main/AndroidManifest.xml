@@ -28,6 +28,9 @@
         <activity android:name=".ComplexListView"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="Custom ListView"/>
+        <activity android:name=".Conversion"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Conversion"/>
     </application>
 
 </manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="conversion_types">
+        <item>metres</item>
+        <item>mile</item>
+        <item>inch</item>
+        <item>feet</item>
+        <item>yard</item>
+        <item>staja</item>
+    </string-array>
+</resources>
