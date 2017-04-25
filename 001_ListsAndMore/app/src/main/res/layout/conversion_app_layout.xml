@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1.0"
-            android:id="@+id/amount_edit_text"
+            android:id="@+id/input_edit_text"
             android:layout_marginTop="16dp" />
     </LinearLayout>
 
@@ -44,7 +44,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/m_text_view"
+            android:id="@+id/metres_text_view"
             android:text="1.0"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginRight="125dp"
@@ -102,7 +102,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/yard_text_view"
-            android:text="1,0936"
+            android:text="1.0936"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_marginRight="23dp"
             android:layout_marginBottom="23dp"/>

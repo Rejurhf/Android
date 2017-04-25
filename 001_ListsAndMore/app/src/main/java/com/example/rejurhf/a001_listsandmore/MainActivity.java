@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         final String[] optionsList = {"Pass Your name", "Custom ListView",
-                "Advance ListView", "Conversion"};
+                "Complex ListView", "Conversion"};
         final ListAdapter basicAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_list_item_1, optionsList);
         ListView optionsListView = (ListView) findViewById(R.id.options_list_view);
@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                 }else if(chosenOption.equals(optionsList[2])){
                     Intent getComplexListIntent = new Intent(MainActivity.this, ComplexListView.class);
                     startActivity(getComplexListIntent);
+                }else if(chosenOption.equals(optionsList[3])){
+                    Intent getConversionIntent = new Intent(MainActivity.this, Conversion.class);
+                    startActivity(getConversionIntent);
                 }
             }
         });
