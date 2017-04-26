@@ -36,6 +36,6 @@ public class Quantity {
     @Override
     public String toString() {
         DecimalFormat df = new DecimalFormat("#.0000");
-        return df.format(value);
+        return df.format(value) + " " + unit.name();
     }
 }
