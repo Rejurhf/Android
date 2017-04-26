@@ -84,7 +84,7 @@ public class Conversion extends Activity {
 
     public void updateUnitTypeUsingMetres(Quantity.Unit currentUnit){
         double doubleToCOnvert = Double.parseDouble(inputEditText.getText().toString());
-        String metresValueString = Double.toString(doubleToCOnvert);
+        String metresValueString = doubleToCOnvert + " metres";
         metresTextView.setText(metresValueString);
 
         updateUnitTextFieldUsingMetres(doubleToCOnvert, Quantity.Unit.mile, mileTextView);
@@ -118,7 +118,14 @@ public class Conversion extends Activity {
         updateUnitTextFieldUsingMetres(doubleToConvert, currentUnit,
                 Quantity.Unit.staja, stajaTextView);
 
-        //TODO textview
+        if (currentUnit.name().equals(currentQuantitySeleccted.unit.name())){
+            String currentUnitText = doubleToConvert + " " + currentQuantitySeleccted.unit.name();
+            String currentTextViewName = currentQuantitySeleccted.unit.name() + "_text_view";
+            int currentId = getResources().getIdentifier(currentTextViewName, "id",
+                    Conversion.this.getPackageName());
+            TextView currentTextView = (TextView) findViewById(currentId);
+            currentTextView.setText(currentUnitText);
+        }
     }
 
     public void updateUnitTextFieldUsingMetres(double doubleToCOnvert, Quantity.Unit currentUnit,
@@ -128,6 +135,4 @@ public class Conversion extends Activity {
                 currentQuantitySelected.to(Quantity.Unit.metres).to(unitConvertTo).toString();
         theTextView.setText(tmpTextView);
     }
-
-    //TODO Przerobić na wartość z jednostką
 }
