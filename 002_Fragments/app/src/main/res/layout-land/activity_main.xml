@@ -17,7 +17,7 @@
         class="com.example.rejurhf.a002_fragments.MainPanelFragment"/>
 
     <fragment
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="match_parent"
         android:id="@+id/side_panel"
         android:layout_alignParentLeft="true"
